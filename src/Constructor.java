@@ -1,48 +1,25 @@
-public class Constructor{
-    private int roll;
-    private String name;
-    private boolean passed;
-    public Constructor(){ /* Constructor */
-        roll = 100;
-        name = "CSE";
-        passed = true;
-    }
-    public Constructor(int roll, String name, boolean passed){ /* Constructor */
-        this.roll = roll;
-        this.name = name;
-        this.passed = passed;
+public class Constructor {
+    private int value;
+
+    public Constructor(int value) {
+        this.value = value;
     }
 
-    public void setRoll(int roll) {
-        this.roll = roll;
+    public Constructor() {
+        this.value = 0;
     }
 
-    public void setPassed(boolean passed) {
-        this.passed = passed;
+    /**
+     * The click method will increase the value by 1
+     */
+    public void click(){
+        value = value + 1;
     }
-
-    public int getRoll() {
-        return roll;
-    }
-
-    public boolean isPassed() {
-        return passed;
-    }
-
-    public String getName(){
-        return name;
-    }
-    public void setName(String name){
-        this.name = name;
-    }
-    public static void main(String[] args) {
-        Constructor helloWorld = new Constructor();
-        Constructor helloWorld2 = new Constructor(300,"SHU", true);
-        helloWorld.setName("ICE");
-        helloWorld.setRoll(13);
-        helloWorld.setPassed(false);
-        System.out.println(helloWorld2.getName());
-        System.out.println(helloWorld.getRoll());
-        System.out.println(helloWorld2.isPassed());
+    /**
+     * The method will return the current value
+     * @return the current value
+     */
+    public int getValue(){
+        return value;
     }
 }
